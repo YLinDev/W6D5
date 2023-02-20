@@ -1,5 +1,41 @@
 <h1> YOUR CAT IS HERE </h1>
 
-<p> 
+<h3> 
     <%= @cat.name %>
-</p>
+</h3>
+
+<table class="cat_table">
+
+    <thead>
+        <tr>
+            <th colspan="2">~~Kitty Information~~</th>
+        </tr>
+    </thead>
+        
+    <tbody>    
+        <tr>
+            <th>Birthday</th>
+
+            <th>Age</th>
+
+            <th>Color</th>
+
+            <th>Sex</th>
+        </tr>
+
+        <tr>
+            <th><%= @cat.birth_date %></th>
+
+            <th><%= @cat.age %></th>
+
+            <th><%= @cat.color %></th>
+
+            <th><%= @cat.sex %></th>
+        </tr>
+    <tbody>
+
+</table>
+
+    <% if @cat.description != "" %>
+        <p><%= @cat.description %></p>
+    <% end %>
